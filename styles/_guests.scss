@@ -1,0 +1,62 @@
+/* Esta seccion contiene los siguientes elementos:
+CONTENEDOR PRINCIPAL---.invitados
+TITULO DE LA SECCION---#titinv
+IMAGENES DE LOS INVITADOS---.invitados img
+
+*/
+@mixin imginvitados {
+    max-width: 100%;
+    height: auto;
+    margin: 0%;
+
+}
+
+.invitados {
+    width: 100%;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.3fr 1fr 1fr;
+    height: auto;
+
+
+    #titinv {
+        grid-column: 1/4;
+        font-family: var(--secondary-font);
+        font-size: 48px;
+        justify-content: center;
+        padding-left: 150px;
+    }
+
+}
+
+.invitados img {
+    @include imginvitados();
+    padding: 0px;
+}
+
+@media screen and (max-width: 540px) {
+    .invitados {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        height: unset;
+        top: -30px;
+
+        #titinv {
+            width: 288px;
+            padding: unset;
+            height: 84px;
+            margin-left: 5%;
+            font-size: 36px;
+            margin-bottom: 7%;
+        }
+
+        img {
+            padding: unset;
+        }
+
+    }
+
+
+}
